@@ -7,7 +7,7 @@ require (
 	github.com/ipfs/boxo v0.21.0
 	github.com/ipfs/go-cid v0.4.1
 	github.com/jianlu8023/go-logger v0.0.6
-	github.com/jianlu8023/go-tools v0.0.0-20240625044520-43e28e09aa48
+	github.com/jianlu8023/go-tools v0.0.0-20240723041211-1b9465a36922
 )
 
 require (

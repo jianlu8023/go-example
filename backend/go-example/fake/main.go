@@ -38,8 +38,8 @@ func main() {
 
 	gofakeit.New(time.Now().UnixMilli())
 	car := gofakeit.Car()
-	prettyJSON, _ := json.ToJSON(car)
-	log.Infof("fake car : %v", prettyJSON)
+	prettyJSON, _ := json.PrettyJSON(car)
+	log.Infof("fake car :\n %v", prettyJSON)
 	log.Infof("fake name : %v", gofakeit.Name())
 	second := gofakeit.Second()
 	log.Infof("second: %d", second)
