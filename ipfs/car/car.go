@@ -15,31 +15,15 @@ import (
 )
 
 func main() {
-
 	logger := glog.NewSugaredLogger(
 		&glog.Config{
 			LogLevel:    "DEBUG",
 			DevelopMode: true,
+			Caller:      true,
+			ModuleName:  "[IPFS]",
+			StackLevel:  "ERROR",
 		},
 		glog.WithConsoleFormat(),
-		glog.WithLumberjack(
-			&glog.LumberjackConfig{
-				FileName:   "./logs/lumberjack-ipfs.log",
-				MaxBackups: 365,
-				MaxSize:    5,
-				MaxAge:     30,
-				Localtime:  true,
-				Compress:   true,
-			},
-		),
-		glog.WithRotateLog(
-			&glog.RotateLogConfig{
-				FileName:     "./logs/rotatelogs-ipfs.log",
-				LocalTime:    true,
-				MaxAge:       "365",
-				RotationTime: "1h",
-			},
-		),
 	)
 
 	client := http.Client{
