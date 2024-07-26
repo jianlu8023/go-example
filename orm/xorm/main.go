@@ -3,6 +3,7 @@ package main
 import (
 	"log"
 
+	// _ "gorm.io/driver/mysql"
 	_ "github.com/go-sql-driver/mysql"
 	"xorm.io/xorm"
 )

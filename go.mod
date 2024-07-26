@@ -3,6 +3,7 @@ module go-example
 go 1.17
 
 require (
+	gitee.com/chunanyong/dm v1.8.15
 	gitee.com/chunanyong/zorm v1.7.6
 	github.com/brianvoe/gofakeit/v6 v6.24.0
 	github.com/go-redis/redis/v8 v8.11.0
@@ -10,6 +11,8 @@ require (
 	github.com/jianlu8023/go-logger v0.0.8
 	github.com/jianlu8023/go-tools v0.0.1
 	go.mongodb.org/mongo-driver v1.13.4
+	gorm.io/driver/mysql v1.5.1
+	gorm.io/gorm v1.25.1
 	xorm.io/xorm v1.3.6
 )
 
@@ -22,6 +25,8 @@ require (
 	github.com/dgryski/go-rendezvous v0.0.0-20200823014737-9f7001d12a5f // indirect
 	github.com/goccy/go-json v0.8.1 // indirect
 	github.com/golang/snappy v0.0.4 // indirect
+	github.com/jinzhu/inflection v1.0.0 // indirect
+	github.com/jinzhu/now v1.1.5 // indirect
 	github.com/json-iterator/go v1.1.12 // indirect
 	github.com/klauspost/compress v1.13.6 // indirect
 	github.com/klauspost/cpuid/v2 v2.0.9 // indirect
