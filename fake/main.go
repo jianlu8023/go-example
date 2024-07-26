@@ -1,9 +1,7 @@
 package main
 
 import (
-	"time"
-
-	"github.com/brianvoe/gofakeit/v6"
+	"github.com/brianvoe/gofakeit/v7"
 	glog "github.com/jianlu8023/go-logger"
 	"github.com/jianlu8023/go-tools/pkg/format/json"
 )
@@ -36,7 +34,7 @@ var log = glog.NewSugaredLogger(
 
 func main() {
 
-	gofakeit.New(time.Now().UnixMilli())
+	gofakeit.New(0)
 	car := gofakeit.Car()
 	prettyJSON, _ := json.PrettyJSON(car)
 	log.Infof("fake car :\n %v", prettyJSON)

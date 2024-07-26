@@ -1,13 +1,13 @@
 module go-example
 
-go 1.21
+go 1.22
 
 require (
-	github.com/brianvoe/gofakeit/v6 v6.24.0
+	github.com/brianvoe/gofakeit/v7 v7.0.4
 	github.com/ipfs/boxo v0.21.0
 	github.com/ipfs/go-cid v0.4.1
-	github.com/jianlu8023/go-logger v0.0.6
-	github.com/jianlu8023/go-tools v0.0.0-20240723041211-1b9465a36922
+	github.com/jianlu8023/go-logger v0.0.8
+	github.com/jianlu8023/go-tools v0.0.1
 )
 
 require (
@@ -58,6 +58,7 @@ require (
 	github.com/ipld/go-ipld-prime v0.21.0 // indirect
 	github.com/jbenet/goprocess v0.1.4 // indirect
 	github.com/klauspost/cpuid/v2 v2.2.8 // indirect
+	github.com/labstack/gommon v0.4.0 // indirect
 	github.com/lestrrat-go/file-rotatelogs v2.4.0+incompatible // indirect
 	github.com/lestrrat-go/strftime v1.0.6 // indirect
 	github.com/libp2p/go-buffer-pool v0.1.0 // indirect
@@ -71,6 +72,7 @@ require (
 	github.com/libp2p/go-libp2p-routing-helpers v0.7.3 // indirect
 	github.com/libp2p/go-msgio v0.3.0 // indirect
 	github.com/libp2p/go-netroute v0.2.1 // indirect
+	github.com/mattn/go-colorable v0.1.13 // indirect
 	github.com/mattn/go-isatty v0.0.20 // indirect
 	github.com/miekg/dns v1.1.61 // indirect
 	github.com/minio/sha256-simd v1.0.1 // indirect
