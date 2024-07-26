@@ -1,9 +1,10 @@
 module go-example
 
-go 1.21
+go 1.17
 
 require (
 	github.com/brianvoe/gofakeit/v6 v6.24.0
+	github.com/go-redis/redis/v8 v8.11.0
 	github.com/jianlu8023/go-logger v0.0.8
 	github.com/jianlu8023/go-tools v0.0.1
 )
@@ -11,8 +12,10 @@ require (
 require (
 	github.com/bytedance/sonic v1.11.9 // indirect
 	github.com/bytedance/sonic/loader v0.1.1 // indirect
+	github.com/cespare/xxhash/v2 v2.1.1 // indirect
 	github.com/cloudwego/base64x v0.1.4 // indirect
 	github.com/cloudwego/iasm v0.2.0 // indirect
+	github.com/dgryski/go-rendezvous v0.0.0-20200823014737-9f7001d12a5f // indirect
 	github.com/klauspost/cpuid/v2 v2.2.8 // indirect
 	github.com/labstack/gommon v0.4.0 // indirect
 	github.com/lestrrat-go/file-rotatelogs v2.4.0+incompatible // indirect
