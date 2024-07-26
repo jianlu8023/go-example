@@ -3,6 +3,7 @@ module go-example
 go 1.17
 
 require (
+	gitee.com/chunanyong/zorm v1.7.6
 	github.com/brianvoe/gofakeit/v6 v6.24.0
 	github.com/go-redis/redis/v8 v8.11.0
 	github.com/go-sql-driver/mysql v1.7.0
