@@ -10,31 +10,15 @@ import (
 )
 
 func main() {
-
 	logger := glog.NewSugaredLogger(
 		&glog.Config{
 			LogLevel:    "DEBUG",
 			DevelopMode: true,
+			ModuleName:  "[LOGGER]",
+			StackLevel:  "ERROR",
+			Caller:      true,
 		},
 		glog.WithConsoleFormat(),
-		glog.WithLumberjack(
-			&glog.LumberjackConfig{
-				FileName:   "./logs/lumberjack-logger.log",
-				MaxBackups: 365,
-				MaxSize:    5,
-				MaxAge:     30,
-				Localtime:  true,
-				Compress:   true,
-			},
-		),
-		glog.WithRotateLog(
-			&glog.RotateLogConfig{
-				FileName:     "./logs/rotatelogs-logger.log",
-				LocalTime:    true,
-				MaxAge:       "365",
-				RotationTime: "1h",
-			},
-		),
 	)
 
 	ticker := time.NewTicker(1 * time.Second)
