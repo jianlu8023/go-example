@@ -10,41 +10,33 @@ import (
 	"github.com/ipfs/boxo/gateway"
 	"github.com/ipfs/boxo/path"
 	"github.com/ipfs/go-cid"
-	glog "github.com/jianlu8023/go-logger"
+	"github.com/jianlu8023/go-example/pkg/logger"
 	fpath "github.com/jianlu8023/go-tools/pkg/path"
 )
 
+var appLogger = logger.GetAppLogger()
+
 func main() {
-	logger := glog.NewSugaredLogger(
-		&glog.Config{
-			LogLevel:    "DEBUG",
-			DevelopMode: true,
-			Caller:      true,
-			ModuleName:  "[IPFS]",
-			StackLevel:  "ERROR",
-		},
-		glog.WithConsoleFormat(),
-	)
 
 	client := http.Client{
 		Timeout: 5 * time.Second,
 	}
 	backend, err := gateway.NewRemoteCarBackend([]string{"http://172.25.138.45:8080"}, &client)
 	if err != nil {
-		logger.Errorf("NewRemoteCarBackend Error: %v", err)
+		appLogger.Errorf("NewRemoteCarBackend Error: %v", err)
 		return
 	}
 	ctx, cancelFunc := context.WithTimeout(context.Background(), 10*time.Second)
 	defer cancelFunc()
 	c, err := cid.Parse("bafybeigggyffcf6yfhx5irtwzx3cgnk6n3dwylkvcpckzhqqrigsxowjwe")
 	if err != nil {
-		logger.Errorf("parse cid Error %v", err)
+		appLogger.Errorf("parse cid Error %v", err)
 		return
 	}
 
 	immutablePath, err := path.NewImmutablePath(path.FromCid(c))
 	if err != nil {
-		logger.Errorf("p.NewImmutablePath Error: %v", err)
+		appLogger.Errorf("p.NewImmutablePath Error: %v", err)
 		return
 	}
 
@@ -53,14 +45,14 @@ func main() {
 	})
 
 	if err != nil {
-		logger.Errorf("GetCAR Error: %v", err)
+		appLogger.Errorf("GetCAR Error: %v", err)
 		return
 	}
-	logger.Infof("car: %v, closer: %v", car, closer)
+	appLogger.Infof("car: %v, closer: %v", car, closer)
 	defer func(closer io.ReadCloser) {
 		err := closer.Close()
 		if err != nil {
-			logger.Errorf("closer.Close Error: %v", err)
+			appLogger.Errorf("closer.Close Error: %v", err)
 
 		}
 	}(closer)
@@ -70,20 +62,20 @@ func main() {
 
 	if err != nil {
 
-		logger.Errorf("path.Ensure Error: %v", err)
+		appLogger.Errorf("path.Ensure Error: %v", err)
 		return
 
 	}
 
 	create, err := os.Create(p)
 	if err != nil {
-		logger.Errorf("os.Create Error: %v", err)
+		appLogger.Errorf("os.Create Error: %v", err)
 		return
 	}
 
 	_, err = io.Copy(create, closer)
 	if err != nil {
-		logger.Errorf("io.Copy Error: %v", err)
+		appLogger.Errorf("io.Copy Error: %v", err)
 		return
 	}
 }

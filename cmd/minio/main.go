@@ -3,22 +3,13 @@ package main
 import (
 	"context"
 
-	glog "github.com/jianlu8023/go-logger"
+	"github.com/jianlu8023/go-example/pkg/logger"
 	"github.com/jianlu8023/go-tools/pkg/format/json"
 	"github.com/minio/minio-go/v7"
 	"github.com/minio/minio-go/v7/pkg/credentials"
 )
 
-var appLogger = glog.NewSugaredLogger(
-	&glog.Config{
-		LogLevel:    "DEBUG",
-		DevelopMode: true,
-		Caller:      true,
-		ModuleName:  "[LOGGER]",
-		StackLevel:  "ERROR",
-	},
-	glog.WithConsoleFormat(),
-)
+var appLogger = logger.GetAppLogger()
 
 func main() {
 	appLogger.Infof("starting test minio ...")

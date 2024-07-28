@@ -2,20 +2,11 @@ package main
 
 import (
 	"github.com/brianvoe/gofakeit/v7"
-	glog "github.com/jianlu8023/go-logger"
+	"github.com/jianlu8023/go-example/pkg/logger"
 	"github.com/jianlu8023/go-tools/pkg/format/json"
 )
 
-var log = glog.NewSugaredLogger(
-	&glog.Config{
-		LogLevel:    "DEBUG",
-		DevelopMode: true,
-		Caller:      true,
-		ModuleName:  "[FAKE]",
-		StackLevel:  "",
-	},
-	glog.WithConsoleFormat(),
-)
+var log = logger.GetAppLogger()
 
 func main() {
 
