@@ -20,27 +20,28 @@ import (
 // https://gitee.com/chunanyong/zorm/tree/v1.7.6
 
 func main() {
-	dbConfig := &zorm.DataSourceConfig{
-		DSN:        "root:123456@tcp(127.0.0.1:3306)/basic?charset=utf8&parseTime=true&loc=Local",
-		DriverName: "mysql",
-		Dialect:    "mysql",
-	}
+	// dbConfig := &zorm.DataSourceConfig{
+	// 	DSN:        "root:123456@tcp(127.0.0.1:3306)/basic?charset=utf8&parseTime=true&loc=Local",
+	// 	DriverName: "mysql",
+	// 	Dialect:    "mysql",
+	// }
+	// dao, err := zorm.NewDBDao(dbConfig)
+	// if err != nil {
+	// 	log.Fatalln(err)
+	// 	return
+	// }
+	// defer func() {
+	// 	if err := dao.CloseDB(); err != nil {
+	// 		log.Fatalln(err)
+	// 	}
+	// }()
+
 	damengConfig := &zorm.DataSourceConfig{
 		DSN:        "dm://SYSDBA:SYSDBA001@127.0.0.1:5236/basic",
 		DriverName: "dm",
 		Dialect:    "dm",
 	}
 
-	dao, err := zorm.NewDBDao(dbConfig)
-	if err != nil {
-		log.Fatalln(err)
-		return
-	}
-	defer func() {
-		if err := dao.CloseDB(); err != nil {
-			log.Fatalln(err)
-		}
-	}()
 	dameng, err := zorm.NewDBDao(damengConfig)
 	if err != nil {
 		log.Fatalln(err)
@@ -51,7 +52,15 @@ func main() {
 			log.Fatalln(err)
 		}
 	}()
-
+	var version []interface{}
+	finder := zorm.NewFinder().Append("SELECT * FROM V$VERSION")
+	err = zorm.Query(context.Background(), finder, &version, nil)
+	// row, err := zorm.QueryRow(context.Background(), finder, &version)
+	if err != nil {
+		log.Fatalln(err)
+		return
+	}
+	log.Println(version)
 }
 
 // CustomDMText 实现ICustomDriverValueConver接口,扩展自定义类型,例如 达梦数据库TEXT类型,映射出来的是dm.DmClob类型,无法使用string类型直接接收
