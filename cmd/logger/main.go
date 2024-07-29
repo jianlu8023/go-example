@@ -6,31 +6,22 @@ import (
 	"syscall"
 	"time"
 
-	glog "github.com/jianlu8023/go-logger"
+	"github.com/jianlu8023/go-example/pkg/logger"
 )
 
 func main() {
-	logger := glog.NewSugaredLogger(
-		&glog.Config{
-			LogLevel:    "DEBUG",
-			DevelopMode: true,
-			ModuleName:  "[LOGGER]",
-			StackLevel:  "ERROR",
-			Caller:      true,
-		},
-		glog.WithConsoleFormat(),
-	)
+	appLogger := logger.GetAPPLogger()
 
 	ticker := time.NewTicker(1 * time.Second)
 
 	go func() {
 		for range ticker.C {
 
-			logger.Debug("debug log")
-			logger.Info("info log")
-			logger.Warn("warn log")
-			logger.Error("error log")
-			// logger.Fatal("fatal log")
+			appLogger.Debug("debug log")
+			appLogger.Info("info log")
+			appLogger.Warn("warn log")
+			appLogger.Error("error log")
+			// appLogger.Fatal("fatal log")
 		}
 	}()
 
@@ -40,6 +31,6 @@ func main() {
 	select {
 	case <-exit:
 		ticker.Stop()
-		logger.Infof("server stopped ...")
+		appLogger.Infof("server stopped ...")
 	}
 }

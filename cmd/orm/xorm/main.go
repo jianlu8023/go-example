@@ -6,6 +6,8 @@ import (
 	// _ "gorm.io/driver/mysql"
 	_ "github.com/go-sql-driver/mysql"
 	"xorm.io/xorm"
+
+	"github.com/jianlu8023/go-example/pkg/logger"
 )
 
 // https://gitea.com/xorm/xorm/src/tag/v1.3.6
@@ -21,6 +23,7 @@ func main() {
 		log.Fatalln(err)
 		return
 	}
+	engine.SetLogger(logger.GetDBLogger())
 	defer func() {
 		if err := engine.Close(); err != nil {
 			log.Fatalln(err)
@@ -32,4 +35,12 @@ func main() {
 		log.Fatalln(err)
 		return
 	}
+	version, err := engine.DBVersion()
+	if err != nil {
+
+		log.Fatalln(err)
+		return
+
+	}
+	log.Println("mysql version:", version)
 }

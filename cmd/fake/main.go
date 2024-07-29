@@ -4,20 +4,12 @@ import (
 	"time"
 
 	"github.com/brianvoe/gofakeit/v6"
-	glog "github.com/jianlu8023/go-logger"
 	"github.com/jianlu8023/go-tools/pkg/format/json"
+
+	"github.com/jianlu8023/go-example/pkg/logger"
 )
 
-var log = glog.NewSugaredLogger(
-	&glog.Config{
-		LogLevel:    "DEBUG",
-		DevelopMode: true,
-		ModuleName:  "[FAKE]",
-		StackLevel:  "ERROR",
-		Caller:      true,
-	},
-	glog.WithConsoleFormat(),
-)
+var log = logger.GetSDKLogger()
 
 func main() {
 
