@@ -3,16 +3,23 @@ module github.com/jianlu8023/go-example
 go 1.22
 
 require (
+	gitee.com/chunanyong/dm v1.8.15
+	gitee.com/chunanyong/zorm v1.7.6
 	github.com/brianvoe/gofakeit/v7 v7.0.4
+	github.com/go-sql-driver/mysql v1.8.1
 	github.com/ipfs/boxo v0.21.0
 	github.com/ipfs/go-cid v0.4.1
 	github.com/jianlu8023/go-logger v0.0.9
 	github.com/jianlu8023/go-tools v0.0.1
 	github.com/minio/minio-go/v7 v7.0.74
 	go.uber.org/zap v1.27.0
+	gorm.io/driver/mysql v1.5.7
+	gorm.io/gorm v1.25.11
+	xorm.io/xorm v1.3.9
 )
 
 require (
+	filippo.io/edwards25519 v1.1.0 // indirect
 	github.com/Jorropo/jsync v1.0.1 // indirect
 	github.com/alecthomas/units v0.0.0-20231202071711-9a357b53e9c9 // indirect
 	github.com/beorn7/perks v1.0.1 // indirect
@@ -37,6 +44,7 @@ require (
 	github.com/goccy/go-json v0.10.3 // indirect
 	github.com/gogo/protobuf v1.3.2 // indirect
 	github.com/golang/protobuf v1.5.3 // indirect
+	github.com/golang/snappy v0.0.4 // indirect
 	github.com/google/gopacket v1.1.19 // indirect
 	github.com/google/uuid v1.6.0 // indirect
 	github.com/hashicorp/errwrap v1.1.0 // indirect
@@ -67,6 +75,8 @@ require (
 	github.com/ipld/go-codec-dagpb v1.6.0 // indirect
 	github.com/ipld/go-ipld-prime v0.21.0 // indirect
 	github.com/jbenet/goprocess v0.1.4 // indirect
+	github.com/jinzhu/inflection v1.0.0 // indirect
+	github.com/jinzhu/now v1.1.5 // indirect
 	github.com/json-iterator/go v1.1.12 // indirect
 	github.com/klauspost/compress v1.17.9 // indirect
 	github.com/klauspost/cpuid/v2 v2.2.8 // indirect
@@ -114,6 +124,7 @@ require (
 	github.com/samber/lo v1.39.0 // indirect
 	github.com/spaolacci/murmur3 v1.1.0 // indirect
 	github.com/sykesm/zap-logfmt v0.0.4 // indirect
+	github.com/syndtr/goleveldb v1.0.0 // indirect
 	github.com/twitchyliquid64/golang-asm v0.15.1 // indirect
 	github.com/ucarion/urlpath v0.0.0-20200424170820-7ccc79b76bbb // indirect
 	github.com/ugorji/go/codec v1.1.7 // indirect
@@ -142,7 +153,6 @@ require (
 	google.golang.org/protobuf v1.34.2 // indirect
 	gopkg.in/natefinch/lumberjack.v2 v2.2.1 // indirect
 	gopkg.in/yaml.v2 v2.4.0 // indirect
-	gorm.io/gorm v1.25.1 // indirect
 	lukechampine.com/blake3 v1.3.0 // indirect
-	xorm.io/xorm v1.3.6 // indirect
+	xorm.io/builder v0.3.11-0.20220531020008-1bd24a7dc978 // indirect
 )
