@@ -2,9 +2,10 @@ package main
 
 import (
 	"context"
-	"fmt"
 
 	"github.com/go-redis/redis/v8"
+
+	"github.com/jianlu8023/go-example/pkg/logger"
 )
 
 func main() {
@@ -14,5 +15,5 @@ func main() {
 		Password: "123456",
 	})
 	ping := rds.Ping(context.TODO())
-	fmt.Println(ping)
+	logger.GetAPPLogger().Infof("ping result: %v", ping)
 }

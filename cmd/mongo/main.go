@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"log"
 
+	"github.com/brianvoe/gofakeit/v6"
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/options"
@@ -34,7 +35,7 @@ func main() {
 	collection := client.Database("basic").Collection("user")
 
 	// 插入一条文档
-	doc := bson.D{{"name", "John"}, {"age", 30}}
+	doc := bson.D{{"name", gofakeit.FirstName()}, {"age", gofakeit.Number(0, 90)}}
 	insertResult, err := collection.InsertOne(context.TODO(), doc)
 	if err != nil {
 		log.Fatal(err)

@@ -1,9 +1,6 @@
 package main
 
 import (
-	"fmt"
-	"log"
-
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
 
@@ -18,14 +15,14 @@ func main() {
 		CreateBatchSize: 1000,
 	})
 	if err != nil {
-		log.Fatalln(err)
+		logger.GetAPPLogger().Errorf("connect mysql failed: %s", err)
 		return
 	}
 	var version string
 	err = db.Raw("select version()").Row().Scan(&version)
 	if err != nil {
-		log.Fatalln(err)
+		logger.GetAPPLogger().Errorf("get mysql version failed: %s", err)
 		return
 	}
-	fmt.Println(version)
+	logger.GetAPPLogger().Infof("version %s", version)
 }
