@@ -12,9 +12,9 @@ import (
 
 var appLogger = logger.GetAPPLogger()
 
-// 测试时使用go1.17.5 获取go1.17.13 可用v7.0.67
+// 测试时使用go1.17.5 或许go1.17.13 可用v7.0.67
 // github.com/minio/minio-go/v7 v7.0.67 // 1.17 最后的版本 测试未通过
-// github.com/minio/minio-go/v7 v7.0.66 // 1.17 可用 与mongo-driver有冲突  github.com/klauspost/compress
+// github.com/minio/minio-go/v7 v7.0.66 // 1.17 可用 与mongo-driver有冲突  github.com/klauspost/compress 当前使用的版本可用 replace github.com/klauspost/compress v1.17.4 => github.com/klauspost/compress v1.16.7
 
 func main() {
 	client, err := minio.New("172.25.133.51:9010", &minio.Options{
