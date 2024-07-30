@@ -17,7 +17,7 @@ var appLogger = logger.GetAPPLogger()
 // github.com/minio/minio-go/v7 v7.0.66 // 1.17 可用 与mongo-driver有冲突  github.com/klauspost/compress 当前使用的版本可用 replace github.com/klauspost/compress v1.17.4 => github.com/klauspost/compress v1.16.7
 
 func main() {
-	client, err := minio.New("172.25.133.51:9010", &minio.Options{
+	client, err := minio.New("127.0.0.1:9010", &minio.Options{
 		Creds: credentials.NewStaticV4("0hEsq7JdoSihXIEgcLK2",
 			"3I4DMqEE0aol3frM3M8Li51F4GyavTFkk4z0ITLc",
 			""),
@@ -66,6 +66,20 @@ func main() {
 				return
 			}
 			appLogger.Infof("bucket %s 的object信息: \n%s", bucket.Name, prettyJSON)
+			// if "demo" == bucket.Name {
+			// 	err := client.RemoveObject(ctx, bucket.Name, obj.Key, minio.RemoveObjectOptions{})
+			// 	if err != nil {
+			// 		appLogger.Errorf("删除object失败: %v", err)
+			// 		return
+			// 	}
+			// }
 		}
+		// if "demo" == bucket.Name {
+		// 	err := client.RemoveBucket(ctx, bucket.Name)
+		// 	if err != nil {
+		// 		appLogger.Errorf("删除bucket失败: %v", err)
+		// 		return
+		// 	}
+		// }
 	}
 }
