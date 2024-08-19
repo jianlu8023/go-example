@@ -16,4 +16,10 @@ func main() {
 		return
 	}
 	appLogger.Infof("获取ipfs的版本信息成功: version:%s, commit:%s", version, sha)
+
+	err = shell.Get("bafybeif4zkmu7qdhkpf3pnhwxipylqleof7rl6ojbe7mq3fzogz6m4xk3i", "/root/go/src/github.com/jianlu8023/go-example/testdata/car")
+	if err != nil {
+		appLogger.Errorf("获取ipfs的cat信息失败: %s", err)
+		return
+	}
 }
