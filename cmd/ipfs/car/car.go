@@ -30,6 +30,7 @@ func main() {
 	m := map[string]string{
 		"bafybeigggyffcf6yfhx5irtwzx3cgnk6n3dwylkvcpckzhqqrigsxowjwe": "0.28.0webui.car",
 		"bafybeif4zkmu7qdhkpf3pnhwxipylqleof7rl6ojbe7mq3fzogz6m4xk3i": "0.8.0webui.car",
+		"bafybeihatzsgposbr3hrngo42yckdyqcc56yean2rynnwpzxstvdlphxf4": "0.30.0webui.car",
 	}
 	for k, v := range m {
 		c, err := cid.Parse(k)
