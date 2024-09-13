@@ -21,7 +21,7 @@ func main() {
 	client := http.Client{
 		// Timeout: 5 * time.Second,
 	}
-	backend, err := gateway.NewRemoteCarBackend([]string{"http://172.25.138.45:8080"}, &client)
+	backend, err := gateway.NewRemoteCarBackend([]string{"http://localhost:8080"}, &client)
 	if err != nil {
 		appLogger.Errorf("NewRemoteCarBackend Error: %v", err)
 		return
