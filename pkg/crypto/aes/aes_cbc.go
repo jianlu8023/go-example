@@ -102,8 +102,12 @@ func EncryptCBCFile(key, inputFile, outputFile string) error {
 		return err
 	}
 	defer outFile.Close()
-
-	block, err := aes.NewCipher([]byte(key))
+	keyBytes, err := hex.DecodeString(key)
+	if err != nil {
+		log.Fatalf("无效的密钥: %v", err)
+		return err
+	}
+	block, err := aes.NewCipher(keyBytes)
 	if err != nil {
 		return err
 	}
@@ -165,8 +169,12 @@ func DecryptCBCFile(key, inputFile, outputFile string) error {
 		return err
 	}
 	defer outFile.Close()
-
-	block, err := aes.NewCipher([]byte(key))
+	keyBytes, err := hex.DecodeString(key)
+	if err != nil {
+		log.Fatalf("无效的密钥: %v", err)
+		return err
+	}
+	block, err := aes.NewCipher(keyBytes)
 	if err != nil {
 		return err
 	}
