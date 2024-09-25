@@ -4,6 +4,7 @@ import (
 	"crypto/rand"
 	"os"
 
+	"github.com/jianlu8023/go-tools/pkg/path"
 	"github.com/tjfoc/gmsm/sm2"
 
 	mysm2 "github.com/jianlu8023/go-example/pkg/crypto/sm2"
@@ -16,8 +17,15 @@ func main() {
 
 	privateKey, err := sm2.GenerateKey(rand.Reader)
 
-	publicKeyPath := "testdata/sm2/public.pem"
-	privateKeyPath := "testdata/sm2/private.pem"
+	var (
+		publicKeyPath  = "testdata/sm2/public.pem"
+		privateKeyPath = "testdata/sm2/private.pem"
+	)
+
+	if err := path.Ensure(privateKeyPath); err != nil {
+		log.Errorf("Ensure privateKeyPath error: %v", err)
+		return
+	}
 
 	if err != nil {
 		log.Errorf("GenerateKey error: %v", err)
