@@ -10,8 +10,8 @@ require (
 	github.com/go-sql-driver/mysql v1.8.1
 	github.com/ipfs/boxo v0.21.0
 	github.com/ipfs/go-cid v0.4.1
-	github.com/jianlu8023/go-logger v0.0.9
-	github.com/jianlu8023/go-tools v0.0.1
+	github.com/jianlu8023/go-logger v0.1.2
+	github.com/jianlu8023/go-tools v1.0.4-0.20240926090734-aeffbe9c3507
 	github.com/minio/minio-go/v7 v7.0.74
 	github.com/shirou/gopsutil/v4 v4.24.8
 	github.com/tjfoc/gmsm v1.4.1

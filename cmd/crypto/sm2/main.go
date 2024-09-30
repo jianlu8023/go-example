@@ -22,7 +22,7 @@ func main() {
 		privateKeyPath = "testdata/sm2/private.pem"
 	)
 
-	if err := path.Ensure(privateKeyPath); err != nil {
+	if err := path.Ensure(privateKeyPath, false); err != nil {
 		log.Errorf("Ensure privateKeyPath error: %v", err)
 		return
 	}

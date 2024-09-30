@@ -16,7 +16,7 @@ func main() {
 		pubKeyPath  = "testdata/ecc/public.pem"
 	)
 
-	if err := path.Ensure(privKeyPath); err != nil {
+	if err := path.Ensure(privKeyPath, false); err != nil {
 		log.Fatalln("ensure private key file error", err)
 		return
 	}

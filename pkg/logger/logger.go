@@ -81,36 +81,6 @@ func init() {
 		)
 		dbLogger = dblogger.NewDBLogger(
 			dblogger.Config{
-				Logger: glog.NewLogger(
-					&glog.Config{
-						LogLevel:    "DEBUG",
-						DevelopMode: true,
-						StackLevel:  "ERROR",
-						ModuleName:  "DB",
-						Caller:      true,
-					},
-					glog.WithConsoleFormat(),
-					glog.WithLumberjack(
-						&glog.LumberjackConfig{
-							FileName:   "./logs/lumberjack-db.log",
-							MaxAge:     30,
-							MaxBackups: 7,
-							MaxSize:    5,
-							Compress:   true,
-							Localtime:  true,
-						},
-					),
-					glog.WithLumberjack(glog.LumberjackDefaultConfig()),
-					glog.WithRotateLog(
-						&glog.RotateLogConfig{
-							FileName:     "./logs/rotatelogs-db.log",
-							LocalTime:    true,
-							RotationTime: "1h",
-							MaxAge:       "365",
-						},
-					),
-					glog.WithRotateLog(glog.RotateLogDefaultConfig()),
-				),
 				LogLevel:                  dblogger.INFO,
 				ShowSql:                   true,
 				SlowThreshold:             2 * time.Second,
@@ -118,6 +88,36 @@ func init() {
 				ParameterizedQueries:      true,
 				Colorful:                  true,
 			},
+			dblogger.WithCustomLogger(glog.NewLogger(
+				&glog.Config{
+					LogLevel:    "DEBUG",
+					DevelopMode: true,
+					StackLevel:  "ERROR",
+					ModuleName:  "DB",
+					Caller:      true,
+				},
+				glog.WithConsoleFormat(),
+				glog.WithLumberjack(
+					&glog.LumberjackConfig{
+						FileName:   "./logs/lumberjack-db.log",
+						MaxAge:     30,
+						MaxBackups: 7,
+						MaxSize:    5,
+						Compress:   true,
+						Localtime:  true,
+					},
+				),
+				glog.WithLumberjack(glog.LumberjackDefaultConfig()),
+				glog.WithRotateLog(
+					&glog.RotateLogConfig{
+						FileName:     "./logs/rotatelogs-db.log",
+						LocalTime:    true,
+						RotationTime: "1h",
+						MaxAge:       "365",
+					},
+				),
+				glog.WithRotateLog(glog.RotateLogDefaultConfig()),
+			)),
 		)
 	})
 }

@@ -20,7 +20,7 @@ func main() {
 		context  = "hello world this is a sm4 crypto test file"
 	)
 
-	if err := path.Ensure(original); err != nil {
+	if err := path.Ensure(original, false); err != nil {
 		log.Errorf("ensure original file failed: %v", err)
 		return
 	}
