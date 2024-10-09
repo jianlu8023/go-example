@@ -3,10 +3,11 @@ package main
 import (
 	"context"
 
-	"github.com/jianlu8023/go-example/pkg/logger"
 	"github.com/jianlu8023/go-tools/pkg/format/json"
 	"github.com/minio/minio-go/v7"
 	"github.com/minio/minio-go/v7/pkg/credentials"
+
+	"github.com/jianlu8023/go-example/pkg/logger"
 )
 
 var appLogger = logger.GetAppLogger()
@@ -32,18 +33,18 @@ func main() {
 	// Upload the test file
 	// Change the value of filePath if the file is in another location
 	// Upload the test file with FPutObject
-	//info, err := minioClient.FPutObject(
+	// info, err := minioClient.FPutObject(
 	//	ctx,
 	//	"go-demo",
 	//	"demo.txt",
 	//	"./testdata/demo.txt",
 	//	minio.PutObjectOptions{ContentType: "application/octet-stream"})
-	//if err != nil {
+	// if err != nil {
 	//	appLogger.Errorf("failed to upload file: %v", err)
 	//	return
-	//}
+	// }
 	//
-	//appLogger.Infof("Successfully uploaded %s of size %d", objectName, info.Size)
+	// appLogger.Infof("Successfully uploaded %s of size %d", objectName, info.Size)
 
 	buckets, err := minioClient.ListBuckets(ctx)
 	if err != nil {

@@ -4,9 +4,10 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/jianlu8023/go-example/pkg/logger"
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
+
+	"github.com/jianlu8023/go-example/pkg/logger"
 )
 
 func main() {
