@@ -6,6 +6,7 @@ require (
 	gitee.com/chunanyong/dm v1.8.15
 	gitee.com/chunanyong/zorm v1.7.7
 	github.com/brianvoe/gofakeit/v7 v7.0.4
+	github.com/bytedance/sonic v1.11.9
 	github.com/ecies/go/v2 v2.0.9
 	github.com/go-sql-driver/mysql v1.8.1
 	github.com/ipfs-cluster/ipfs-cluster v1.1.0
@@ -20,7 +21,6 @@ require (
 	github.com/shirou/gopsutil/v4 v4.24.8
 	github.com/tjfoc/gmsm v1.4.1
 	go.uber.org/zap v1.27.0
-	google.golang.org/genproto/googleapis/rpc v0.0.0-20240617180043-68d350f18fd4
 	gorm.io/driver/mysql v1.5.7
 	gorm.io/gorm v1.25.11
 	xorm.io/xorm v1.3.9
@@ -33,7 +33,6 @@ require (
 	github.com/benbjohnson/clock v1.3.5 // indirect
 	github.com/beorn7/perks v1.0.1 // indirect
 	github.com/blang/semver/v4 v4.0.0 // indirect
-	github.com/bytedance/sonic v1.11.9 // indirect
 	github.com/bytedance/sonic/loader v0.1.1 // indirect
 	github.com/cespare/xxhash/v2 v2.3.0 // indirect
 	github.com/cloudwego/base64x v0.1.4 // indirect
@@ -223,6 +222,7 @@ require (
 	golang.org/x/tools v0.22.0 // indirect
 	golang.org/x/xerrors v0.0.0-20231012003039-104605ab7028 // indirect
 	gonum.org/v1/gonum v0.15.0 // indirect
+	google.golang.org/genproto/googleapis/rpc v0.0.0-20240617180043-68d350f18fd4 // indirect
 	google.golang.org/protobuf v1.34.2 // indirect
 	gopkg.in/natefinch/lumberjack.v2 v2.2.1 // indirect
 	gopkg.in/yaml.v2 v2.4.0 // indirect
