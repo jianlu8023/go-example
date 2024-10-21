@@ -4,6 +4,7 @@ import (
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
 
+	"github.com/jianlu8023/go-example/internal/database/entity"
 	"github.com/jianlu8023/go-example/pkg/logger"
 )
 
@@ -16,6 +17,10 @@ func main() {
 	})
 	if err != nil {
 		logger.GetAPPLogger().Errorf("connect mysql failed: %s", err)
+		return
+	}
+	if err = db.AutoMigrate(&entity.User{}); err != nil {
+		logger.GetDBLogger().Errorf("自动迁移失败 %v", err)
 		return
 	}
 	var version string

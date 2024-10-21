@@ -11,6 +11,7 @@ require (
 	github.com/ipfs/go-ipfs-api v0.3.0
 	github.com/jianlu8023/go-logger v0.0.9
 	github.com/jianlu8023/go-tools v0.0.1
+	github.com/jordan-wright/email v4.0.1-0.20210109023952-943e75fe5223+incompatible
 	github.com/minio/minio-go/v7 v7.0.66
 	go.mongodb.org/mongo-driver v1.13.4
 	go.uber.org/zap v1.21.0
