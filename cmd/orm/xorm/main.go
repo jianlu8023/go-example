@@ -5,7 +5,7 @@ import (
 	_ "github.com/go-sql-driver/mysql"
 	"xorm.io/xorm"
 
-	"github.com/jianlu8023/go-example/pkg/logger"
+	"github.com/jianlu8023/go-example/internal/logger"
 )
 
 // https://gitea.com/xorm/xorm/src/tag/v1.3.6

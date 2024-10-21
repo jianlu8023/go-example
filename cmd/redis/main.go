@@ -5,7 +5,7 @@ import (
 
 	"github.com/go-redis/redis/v8"
 
-	"github.com/jianlu8023/go-example/pkg/logger"
+	"github.com/jianlu8023/go-example/internal/logger"
 )
 
 func main() {

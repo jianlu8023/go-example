@@ -6,7 +6,7 @@ import (
 	"github.com/brianvoe/gofakeit/v6"
 	"github.com/jianlu8023/go-tools/pkg/format/json"
 
-	"github.com/jianlu8023/go-example/pkg/logger"
+	"github.com/jianlu8023/go-example/internal/logger"
 )
 
 var log = logger.GetSDKLogger()

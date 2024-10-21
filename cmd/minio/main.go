@@ -7,7 +7,7 @@ import (
 	"github.com/minio/minio-go/v7"
 	"github.com/minio/minio-go/v7/pkg/credentials"
 
-	"github.com/jianlu8023/go-example/pkg/logger"
+	"github.com/jianlu8023/go-example/internal/logger"
 )
 
 var appLogger = logger.GetAPPLogger()
