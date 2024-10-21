@@ -11,7 +11,7 @@ import (
 	"github.com/ipfs/boxo/path"
 	"github.com/ipfs/go-cid"
 
-	"github.com/jianlu8023/go-example/pkg/logger"
+	"github.com/jianlu8023/go-example/internal/logger"
 )
 
 var appLogger = logger.GetAppLogger()

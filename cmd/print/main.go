@@ -3,7 +3,7 @@ package main
 import (
 	"github.com/bytedance/sonic"
 
-	"github.com/jianlu8023/go-example/pkg/logger"
+	"github.com/jianlu8023/go-example/internal/logger"
 )
 
 // User user结构体

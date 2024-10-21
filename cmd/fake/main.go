@@ -4,7 +4,7 @@ import (
 	"github.com/brianvoe/gofakeit/v7"
 	"github.com/jianlu8023/go-tools/pkg/format/json"
 
-	"github.com/jianlu8023/go-example/pkg/logger"
+	"github.com/jianlu8023/go-example/internal/logger"
 )
 
 var log = logger.GetAppLogger()

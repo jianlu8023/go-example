@@ -8,7 +8,7 @@ import (
 	"gorm.io/gorm"
 
 	"github.com/jianlu8023/go-example/internal/database/entity"
-	"github.com/jianlu8023/go-example/pkg/logger"
+	"github.com/jianlu8023/go-example/internal/logger"
 )
 
 const (

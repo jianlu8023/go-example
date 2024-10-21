@@ -5,7 +5,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/jianlu8023/go-example/pkg/logger"
+	"github.com/jianlu8023/go-example/internal/logger"
 )
 
 var (

@@ -6,7 +6,7 @@ import (
 
 	gredis "github.com/redis/go-redis/v9"
 
-	"github.com/jianlu8023/go-example/pkg/logger"
+	"github.com/jianlu8023/go-example/internal/logger"
 )
 
 var (

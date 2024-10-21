@@ -5,8 +5,8 @@ import (
 
 	"github.com/jianlu8023/go-tools/pkg/path"
 
+	"github.com/jianlu8023/go-example/internal/logger"
 	"github.com/jianlu8023/go-example/pkg/crypto/sm4"
-	"github.com/jianlu8023/go-example/pkg/logger"
 )
 
 var log = logger.GetAppLogger()
