@@ -10,6 +10,7 @@ require (
 	github.com/ecies/go/v2 v2.0.9
 	github.com/gin-gonic/gin v1.10.0
 	github.com/go-sql-driver/mysql v1.8.1
+	github.com/golang-module/carbon/v2 v2.4.1
 	github.com/gorilla/websocket v1.5.3
 	github.com/ipfs-cluster/ipfs-cluster v1.1.0
 	github.com/ipfs/boxo v0.21.0
