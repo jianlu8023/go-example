@@ -5,6 +5,7 @@ go 1.22
 require (
 	gitee.com/chunanyong/dm v1.8.15
 	gitee.com/chunanyong/zorm v1.7.7
+	github.com/alexedwards/scs/v2 v2.8.0
 	github.com/brianvoe/gofakeit/v7 v7.0.4
 	github.com/bytedance/sonic v1.11.9
 	github.com/ecies/go/v2 v2.0.9
