@@ -20,3 +20,4 @@ log/
 go.sum
 testdata/
 .vscode/
+/cmd/web/gin/use-jsoniter/gin

@@ -3,11 +3,11 @@ module github.com/jianlu8023/go-example
 go 1.22
 
 require (
-	gitee.com/chunanyong/dm v1.8.15
+	gitee.com/chunanyong/dm v1.8.16
 	gitee.com/chunanyong/zorm v1.7.7
 	github.com/alexedwards/scs/v2 v2.8.0
-	github.com/brianvoe/gofakeit/v7 v7.0.4
-	github.com/bytedance/sonic v1.11.9
+	github.com/brianvoe/gofakeit/v7 v7.1.2
+	github.com/bytedance/sonic v1.12.3
 	github.com/ecies/go/v2 v2.0.9
 	github.com/gin-gonic/gin v1.10.0
 	github.com/go-sql-driver/mysql v1.8.1
@@ -20,12 +20,14 @@ require (
 	github.com/jianlu8023/go-logger v0.1.2
 	github.com/jianlu8023/go-tools v1.0.4-0.20240926090734-aeffbe9c3507
 	github.com/jordan-wright/email v4.0.1-0.20210109023952-943e75fe5223+incompatible
+	github.com/json-iterator/go v1.1.12
 	github.com/miekg/dns v1.1.62
 	github.com/minio/minio-go/v7 v7.0.74
 	github.com/mojocn/base64Captcha v1.3.6
 	github.com/multiformats/go-multiaddr v0.12.4
-	github.com/redis/go-redis/v9 v9.6.1
-	github.com/shirou/gopsutil/v4 v4.24.8
+	github.com/redis/go-redis/v9 v9.7.0
+	github.com/shirou/gopsutil/v4 v4.24.10
+	github.com/tidwall/gjson v1.18.0
 	github.com/tjfoc/gmsm v1.4.1
 	go.mongodb.org/mongo-driver v1.17.1
 	go.uber.org/zap v1.27.0
@@ -43,7 +45,7 @@ require (
 	github.com/benbjohnson/clock v1.3.5 // indirect
 	github.com/beorn7/perks v1.0.1 // indirect
 	github.com/blang/semver/v4 v4.0.0 // indirect
-	github.com/bytedance/sonic/loader v0.1.1 // indirect
+	github.com/bytedance/sonic/loader v0.2.0 // indirect
 	github.com/cespare/xxhash/v2 v2.3.0 // indirect
 	github.com/cloudwego/base64x v0.1.4 // indirect
 	github.com/cloudwego/iasm v0.2.0 // indirect
@@ -56,6 +58,7 @@ require (
 	github.com/dgryski/go-rendezvous v0.0.0-20200823014737-9f7001d12a5f // indirect
 	github.com/docker/go-units v0.5.0 // indirect
 	github.com/dustin/go-humanize v1.0.1 // indirect
+	github.com/ebitengine/purego v0.8.1 // indirect
 	github.com/elastic/gosigar v0.14.3 // indirect
 	github.com/ethereum/go-ethereum v1.13.5 // indirect
 	github.com/felixge/httpsnoop v1.0.4 // indirect
@@ -113,7 +116,6 @@ require (
 	github.com/jbenet/goprocess v0.1.4 // indirect
 	github.com/jinzhu/inflection v1.0.0 // indirect
 	github.com/jinzhu/now v1.1.5 // indirect
-	github.com/json-iterator/go v1.1.12 // indirect
 	github.com/klauspost/compress v1.17.9 // indirect
 	github.com/klauspost/cpuid/v2 v2.2.8 // indirect
 	github.com/koron/go-ssdp v0.0.4 // indirect
@@ -196,11 +198,12 @@ require (
 	github.com/raulk/go-watchdog v1.3.0 // indirect
 	github.com/rs/xid v1.5.0 // indirect
 	github.com/samber/lo v1.39.0 // indirect
-	github.com/shoenig/go-m1cpu v0.1.6 // indirect
 	github.com/spaolacci/murmur3 v1.1.0 // indirect
 	github.com/stretchr/testify v1.9.0 // indirect
 	github.com/sykesm/zap-logfmt v0.0.4 // indirect
 	github.com/syndtr/goleveldb v1.0.1-0.20210819022825-2ae1ddf74ef7 // indirect
+	github.com/tidwall/match v1.1.1 // indirect
+	github.com/tidwall/pretty v1.2.0 // indirect
 	github.com/tklauser/go-sysconf v0.3.12 // indirect
 	github.com/tklauser/numcpus v0.6.1 // indirect
 	github.com/tv42/httpunix v0.0.0-20150427012821-b75d8614f926 // indirect
@@ -232,7 +235,7 @@ require (
 	golang.org/x/image v0.14.0 // indirect
 	golang.org/x/mod v0.18.0 // indirect
 	golang.org/x/net v0.27.0 // indirect
-	golang.org/x/sys v0.24.0 // indirect
+	golang.org/x/sys v0.26.0 // indirect
 	golang.org/x/text v0.17.0 // indirect
 	golang.org/x/tools v0.22.0 // indirect
 	golang.org/x/xerrors v0.0.0-20231012003039-104605ab7028 // indirect
