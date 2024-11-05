@@ -6,10 +6,13 @@ require (
 	gitee.com/chunanyong/dm v1.8.16
 	gitee.com/chunanyong/zorm v1.7.7
 	github.com/alexedwards/scs/v2 v2.8.0
+	github.com/avast/retry-go/v4 v4.6.0
 	github.com/brianvoe/gofakeit/v7 v7.1.2
 	github.com/bytedance/sonic v1.12.3
 	github.com/ecies/go/v2 v2.0.9
+	github.com/failsafe-go/failsafe-go v0.6.9
 	github.com/gin-gonic/gin v1.10.0
+	github.com/go-resty/resty/v2 v2.15.3
 	github.com/go-sql-driver/mysql v1.8.1
 	github.com/golang-module/carbon/v2 v2.4.1
 	github.com/gorilla/websocket v1.5.3
@@ -234,13 +237,13 @@ require (
 	golang.org/x/exp v0.0.0-20240613232115-7f521ea00fb8 // indirect
 	golang.org/x/image v0.14.0 // indirect
 	golang.org/x/mod v0.18.0 // indirect
-	golang.org/x/net v0.27.0 // indirect
+	golang.org/x/net v0.28.0 // indirect
 	golang.org/x/sys v0.26.0 // indirect
 	golang.org/x/text v0.17.0 // indirect
 	golang.org/x/tools v0.22.0 // indirect
 	golang.org/x/xerrors v0.0.0-20231012003039-104605ab7028 // indirect
 	gonum.org/v1/gonum v0.15.0 // indirect
-	google.golang.org/genproto/googleapis/rpc v0.0.0-20240617180043-68d350f18fd4 // indirect
+	google.golang.org/genproto/googleapis/rpc v0.0.0-20240814211410-ddb44dafa142 // indirect
 	google.golang.org/protobuf v1.34.2 // indirect
 	gopkg.in/alexcesaro/quotedprintable.v3 v3.0.0-20150716171945-2caba252f4dc // indirect
 	gopkg.in/natefinch/lumberjack.v2 v2.2.1 // indirect
