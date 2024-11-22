@@ -27,6 +27,7 @@ func init() {
 				ModuleName:  "APP",
 				Caller:      true,
 			},
+			glog.WithFileOutPut(),
 			glog.WithConsoleFormat(),
 			glog.WithLumberjack(
 				&glog.LumberjackConfig{
@@ -57,6 +58,7 @@ func init() {
 				ModuleName:  "SDK",
 				Caller:      true,
 			},
+			glog.WithFileOutPut(),
 			glog.WithConsoleFormat(),
 			glog.WithLumberjack(
 				&glog.LumberjackConfig{
@@ -107,6 +109,7 @@ func init() {
 						Localtime:  true,
 					},
 				),
+				glog.WithFileOutPut(),
 				glog.WithLumberjack(glog.LumberjackDefaultConfig()),
 				glog.WithRotateLog(
 					&glog.RotateLogConfig{

@@ -8,7 +8,7 @@ require (
 	github.com/alexedwards/scs/v2 v2.8.0
 	github.com/avast/retry-go/v4 v4.6.0
 	github.com/brianvoe/gofakeit/v7 v7.1.2
-	github.com/bytedance/sonic v1.12.3
+	github.com/bytedance/sonic v1.12.4
 	github.com/ecies/go/v2 v2.0.9
 	github.com/failsafe-go/failsafe-go v0.6.9
 	github.com/gin-gonic/gin v1.10.0
@@ -20,7 +20,7 @@ require (
 	github.com/ipfs/boxo v0.21.0
 	github.com/ipfs/go-cid v0.4.1
 	github.com/ipfs/go-ipfs-api v0.7.0
-	github.com/jianlu8023/go-logger v0.1.2
+	github.com/jianlu8023/go-logger v1.0.3
 	github.com/jianlu8023/go-tools v1.0.4-0.20240926090734-aeffbe9c3507
 	github.com/jordan-wright/email v4.0.1-0.20210109023952-943e75fe5223+incompatible
 	github.com/json-iterator/go v1.1.12
@@ -28,6 +28,7 @@ require (
 	github.com/minio/minio-go/v7 v7.0.74
 	github.com/mojocn/base64Captcha v1.3.6
 	github.com/multiformats/go-multiaddr v0.12.4
+	github.com/quic-go/quic-go v0.45.0
 	github.com/redis/go-redis/v9 v9.7.0
 	github.com/shirou/gopsutil/v4 v4.24.10
 	github.com/tidwall/gjson v1.18.0
@@ -196,7 +197,6 @@ require (
 	github.com/prometheus/common v0.54.0 // indirect
 	github.com/prometheus/procfs v0.15.1 // indirect
 	github.com/quic-go/qpack v0.4.0 // indirect
-	github.com/quic-go/quic-go v0.45.0 // indirect
 	github.com/quic-go/webtransport-go v0.8.0 // indirect
 	github.com/raulk/go-watchdog v1.3.0 // indirect
 	github.com/rs/xid v1.5.0 // indirect
