@@ -15,6 +15,7 @@ var (
 	log = logger.GetAppLogger()
 )
 
+// https://www.cnblogs.com/guangdelw/p/18306424
 func main() {
 	// 设置要查询的域名和 DNS 服务器地址
 	domain := "baidu.com"
