@@ -7,6 +7,7 @@ import (
 	glog "github.com/jianlu8023/go-logger"
 	"github.com/jianlu8023/go-logger/dblogger"
 	"go.uber.org/zap"
+	"go.uber.org/zap/zapcore"
 )
 
 var once sync.Once
@@ -109,6 +110,23 @@ func init() {
 						Localtime:  true,
 					},
 				),
+				glog.WithConsoleConfig(zapcore.EncoderConfig{
+					MessageKey:     "msg",
+					LevelKey:       "",
+					TimeKey:        "",
+					NameKey:        "",
+					CallerKey:      "",
+					FunctionKey:    "",
+					StacktraceKey:  "",
+					SkipLineEnding: false,
+					LineEnding:     zapcore.DefaultLineEnding,
+					EncodeLevel:    glog.CustomColorCapitalLevelEncoder,
+					EncodeTime:     glog.CustomTimeEncoder,
+					EncodeDuration: zapcore.SecondsDurationEncoder,
+					EncodeCaller:   zapcore.ShortCallerEncoder,
+					EncodeName:     zapcore.FullNameEncoder,
+				}),
+
 				glog.WithFileOutPut(),
 				glog.WithLumberjack(glog.LumberjackDefaultConfig()),
 				glog.WithRotateLog(
